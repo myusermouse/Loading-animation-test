@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+:root{
+    --primary-background: #F0F0F0;
+    --primary-text: #1B1B1B;
+    
+    --blue-background: #3133FF;
+    
+}
+
+body{
+    background: var(--primary-background);
+}
+
+
+
+/****************** ST ********************/
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contant{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.back-anim{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    overflow: hidden;
+}
+.back-anim h1{
+    font-size: 1.2em;
+}
+.back-anim:after{
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(transparent, transparent, #2F2F2F, #000000);
+    position: absolute;
+    animation: anim .6s ease-out infinite;
+}
+@keyframes anim{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.back-anim:before{
+    content: "";
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--primary-background);
+    position: absolute;
+    z-index: 10;
+    
+}
+
